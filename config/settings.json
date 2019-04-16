@@ -1,0 +1,10 @@
+{
+"settings":{
+    "hostName": "localhost",
+    "portNumber": 9000,
+    "reloadPort": 9001,
+    "siteTitle" : "Backup and Restore Management Platform",
+    "siteName"  : "Bakup and Restore Toolkit"
+}
+
+}

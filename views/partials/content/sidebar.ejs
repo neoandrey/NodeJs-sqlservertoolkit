@@ -1,0 +1,105 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" id="tasks">
+                    <span data-feather="activity"></span> Tasks <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="servers">
+                    <span data-feather="server"></span> Servers
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="# " id="databases">
+                    <span data-feather="database"></span> Databases
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="scripts">
+                    <span data-feather="edit"></span> Scripts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="jobs">
+                    <span data-feather="trending-up"></span> Jobs
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="backup-files">
+                    <span data-feather="layers"></span> Backup Files
+                </a>
+            </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Users</span>
+            <a class="d-flex align-items-center text-muted" href="#" id="toggle-user-list">
+                <span id="user-minus" data-feather="minus-circle"></span> <span id="user-plus" style="display:none;" data-feather="plus-circle"></span>
+            </a>
+        </h6>
+        <div id="user-list">
+            <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="local-users">
+                        <span data-feather="user"></span> Local Users
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="ldap-users">
+                        <span data-feather="user-plus"></span> LDAP Users
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="database-users">
+                        <span data-feather="users"></span> Database Users
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Configuration</span>
+            <a class="d-flex align-items-center text-muted" href="#" id="toggle-config-list">
+                <span id="config-minus" data-feather="minus-circle"></span> <span id="config-plus" style="display:none;" data-feather="plus-circle"></span>
+            </a>
+        </h6>
+        <div id="config-list">
+            <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="config">
+                        <span data-feather="settings"></span> Settings
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="mail">
+                        <span data-feather="mail"></span> Email
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Audit Trail</span>
+            <a class="d-flex align-items-center text-muted" href="#" id="toggle-audit-list">
+                <span id="audit-minus" data-feather="minus-circle"></span> <span id="audit-plus" style="display:none;" data-feather="plus-circle"></span>
+            </a>
+        </h6>
+        <div id="audit-list">
+            <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="requests">
+                        <span data-feather="archive"></span> Requests
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+    </div>
+</nav>

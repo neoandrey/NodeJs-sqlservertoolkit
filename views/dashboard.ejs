@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <% include partials/template/links.ejs %>
+</head>
+
+<body id="<%= pageID%>">
+    <% include partials/template/dashboardnav.ejs %>
+
+        <div class="container-fluid">
+            <div class="row">
+                <% include partials/content/sidebar.ejs %>
+                    <!--  <% include partials/content/main.ejs %>-->
+                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom" id="breadcrumb-section">
+                            <h1 class="h2" id="page-title">Tasks</h1>
+                        </div>
+                        <div class="album py-5 bg-light">
+                            <div class="container" id="data-section">
+                                <div class="row">
+                                    <%  var addRestoreConfig                  = new  sqlServerToolkit.DashboardOption(); 
+                                        addRestoreConfig.optionID             = 1;
+                                        addRestoreConfig.name                 = 'Configuration';
+                                        addRestoreConfig.imageLocation        = 'silver_db_config.png'; 
+                                        addRestoreConfig.mainText             = 'Add a Database Backup Configuration<br /><br />';
+                                        addRestoreConfig.minorText            = 'Configurations';
+                                        addRestoreConfig.viewBttnTipText      =  'View existing Configurations';
+                                        addRestoreConfig.newBttnTipText       =  'Create a new  Configuration';
+
+                                         var addRestoreSchedule               = new  sqlServerToolkit.DashboardOption(); 
+                                        addRestoreSchedule.optionID           = 2;
+                                        addRestoreSchedule.name               = 'schedule';
+                                        addRestoreSchedule.imageLocation      = 'db_restore_schedule.png'; 
+                                        addRestoreSchedule.mainText           = 'Add a Database Backup Schedule<br/><br />';
+                                        addRestoreSchedule.minorText          = 'Schedules';
+                                        addRestoreSchedule.viewBttnTipText    =  'View existing schedules';
+
+                                        var addDatabaseToCluster                = new  sqlServerToolkit.DashboardOption(); 
+                                        addDatabaseToCluster.optionID           = 3;
+                                        addDatabaseToCluster.name               = 'Cluster';
+                                        addDatabaseToCluster.imageLocation      = 'silver_db_cluster.jpg'; 
+                                        addDatabaseToCluster.mainText           = 'Add a database to cluster<br /><br /><br /><br />';
+                                        addDatabaseToCluster.minorText          = 'Cluster';
+                                        addDatabaseToCluster.viewBttnTipText    = 'View historical cluster additions';
+                                        addDatabaseToCluster.newBttnTipText     = 'Add Database to Cluster';
+                                        
+                                        var restoreDbfromBackup                = new  sqlServerToolkit.DashboardOption(); 
+                                        restoreDbfromBackup.optionID           = 4;
+                                        restoreDbfromBackup.name               = 'restore';
+                                        restoreDbfromBackup.imageLocation      = 'silver_db_restore.png'; 
+                                        restoreDbfromBackup.mainText           = 'Restore a database from an Existing backup file';
+                                        restoreDbfromBackup.minorText          = 'Restores';
+                                        restoreDbfromBackup.viewBttnTipText    = 'View historical Database Restore<br /><br />';
+                                        restoreDbfromBackup.newBttnTipText     = 'Create a new Database Restore';
+                                         var backupDbfromConfig              = new  sqlServerToolkit.DashboardOption(); 
+                                        backupDbfromConfig.optionID           = 5;
+                                        backupDbfromConfig.name               = 'backup';
+                                        backupDbfromConfig.imageLocation      = 'silver_db_backup.png'; 
+                                        backupDbfromConfig.mainText           = 'backup a database from with an existing configuration';
+                                        backupDbfromConfig.minorText          = 'Backups';
+                                        backupDbfromConfig.viewBttnTipText    = 'View historical Database Backup';
+                                        backupDbfromConfig.newBttnTipText     = 'Create a new Database backup';
+
+
+                                        var manageDatabases                     = new  sqlServerToolkit.DashboardOption(); 
+                                        manageDatabases.optionID           = 6;
+                                        manageDatabases.name               = 'Management';
+                                        manageDatabases.imageLocation      = 'silver_db.jpg'; 
+                                        manageDatabases.mainText           = 'Manage databases <br /><br /><br />';
+                                        manageDatabases.minorText          = 'Management';
+                                        manageDatabases.viewBttnTipText    = 'Manage existing databases additions';
+                                        manageDatabases.newBttnTipText     = 'Add a new Database for management';
+
+
+                                     %>
+                                        <%-addRestoreConfig.getHtml(); %>
+                                            <%-addRestoreSchedule.getHtml();%>
+                                                <%-restoreDbfromBackup.getHtml();%>
+                                                    <%-addDatabaseToCluster.getHtml();%>
+                                                        <%-backupDbfromConfig.getHtml();%>
+                                                            <%-manageDatabases.getHtml();%>
+
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+            </div>
+        </div>
+        <script src="/reload/reload.js"></script>
+        <% include partials/template/modal.ejs %>
+</body>
+
+</html>

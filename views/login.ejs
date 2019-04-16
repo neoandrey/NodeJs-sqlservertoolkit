@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <% include partials/template/links.ejs %>
+</head>
+
+<body id="login">
+    <form class="form-signin" id="login-form" method="post">
+        <section class="card mb-5 border-secondary">
+            <div class="card-body">
+                <img class="card-img img fluid" />
+                <div class="text-center mb-4">
+                    <!-- <img class="mb-4" src="assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+                    <h1 class="card-title mb-3 font-weight-normal">
+                        <%= siteTitle %>
+                    </h1>
+                    <!--   <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p> -->
+                </div>
+                <!--<div id="login-alert" class="text-center alert alert-info alert-dismissible fade show"> -->
+                <div id="login-alert" class="alert alert-info alert-dismissible show text-center" role="alert">
+                    <strong>Please type your credentials to login</strong>
+                </div>
+
+                <div class="form-label-group mt-12">
+                    <input type="test" id="inputUserName" class="form-control" placeholder="User Name" required autofocus>
+                    <label for="inputUserName">User Name</label>
+                </div>
+
+                <div class="form-label-group mb-5">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="checkbox mb-5">
+                    <label><input name="remember_me"  id="remember-me" type="checkbox" value="remember-me" /> Remember me  </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" id="login-submit-bttn">Sign in</button>
+                <p class="mt-20 mb-20 text-muted text-center">&copy; 2017-2018</p>
+
+                <a class="card-link" />
+            </div>
+        </section>
+    </form>
+    <script src="/reload/reload.js"></script>
+    <% include partials/template/modal.ejs %>
+</body>
+
+</html>

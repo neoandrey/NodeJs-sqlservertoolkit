@@ -1,0 +1,18 @@
+users 
+    a. applicion users
+    b. LDAP users
+
+
+
+
+
+
+
+/*
+=============
+PENDING TASKS
+=============
+1.  Remove 'undefined' on login page
+
+
+*/
